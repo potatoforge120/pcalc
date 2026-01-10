@@ -17,7 +17,7 @@ To install and compile the program, follow these steps:
 ```
 git clone
 git clone https://github.com/potatoforge120/calc-cli
-cd your-repo-name
+cd calc-cli
 mkdir build 
 cd build
 cmake ..
