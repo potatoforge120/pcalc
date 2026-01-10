@@ -7,7 +7,7 @@ A simple command-line calculator.
  
 ## 🗺️Roadmap
 - adding more functions
-- make it support for unlimited arguments in some func (e.g., calc -p 1 2 3 4 5)
+- support for unlimited arguments in some func (e.g., calc -p 1 2 3 4 5)
 - making tui
 - saving answer and reuse it
 
