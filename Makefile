@@ -8,8 +8,7 @@ CXXFLAGS = -Wall
 TARGET = calc
 
 # The list of files to compile
-SRCS = main.cpp laws.cpp 
-
+SRCS = main.cpp laws.cpp solver.cpp
 # --- The Instructions ---
 
 all: $(TARGET)

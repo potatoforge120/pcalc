@@ -1,63 +1,40 @@
 #include  <iostream>
 #include "laws.hpp"
+#include "solver.hpp"
 using namespace std;
+int main (int argc, char *argv[]) {
+  if (argc > 1) {
+    string argument = argv[1];
+    if (argument == "-h"||argument == "--help")
+    {
+cout << "Usage: pcalc [expression]" << endl;
+            cout << "\nOptions:" << endl;
+            cout << "  -h, --help    Show this help message" << endl;
+            cout << "  -v            Show version information" << endl;
+            
+            cout << "\nMath Examples:" << endl;
+            cout << "  pcalc 10+5" << endl;
+            cout << "  pcalc 10x5" << endl;
+            cout << "  pcalc 10/2" << endl;
 
-int main (int argc, char* argv[]) {
-
-  string flag = argv[1];
-   if (flag == "-h"||flag == "help"){
-      cout << "usage: calc [flag] [num]" <<endl
-       << "Flags: "<<endl
-       << "-p  --plus    add two   nums "<<endl
-       << "-m  --minus   decrees   nums "<<endl
-       << "-d  --divide   divide   nums "<<endl
-       << "-mu --multi   multiplay nums "<<endl
-       << "-c  --circle  circle area using  radius "<<endl
-       << "-sq --square    square finding "<<endl
-       << "-t  --triangle   triangle area using base and hight"<<endl ;
-  
-    return 0 ; 
-   }
-
-
-   if (flag == "-p"||flag == "--plus") {
-      double x = atof(argv[2]);
-      double y = atof(argv[3]);
-
-
-      cout <<"= "<< plus_func(x,y) <<endl; 
+            cout << "\nGeometry Functions:" << endl;
+            cout << "  pcalc sqr:5       (Square of 5)" << endl;
+            cout << "  pcalc cir:10      (Area of circle with radius 10)" << endl;
+            cout << "  pcalc tri:3,4     (Area of triangle with base 3, height 4)" << endl;
+            
+            cout << "\nComplex Example:" << endl;
+            cout << "  pcalc 10x2+sqr:5" << endl;    }
+    else if (argument == "-v") {
+     cout<< "calc-cli v1.5"<<endl;
     }
-  if(flag == "-m"||flag == "--minus"){
-     double x = atof(argv[2]);
-     double y = atof(argv[3]);
-
-
-cout <<"= "<< minus_func(x,y)<< endl;
-  }
-  if (flag == "-d"||flag == "--divide"){
-    double x = atof(argv[2]);
-    double y = atof(argv[3]);
-
-
-   cout <<"= "<< divide_func(x,y)<< endl;
-  }
-  if (flag == "-mu"||flag == "--multiplay") {
-  double x = atof(argv[2]);
-  double y = atof(argv[3]);
-  cout <<"= "<< multi_func(x,y)<< endl;
-  }
-  if (flag == "-sq"||flag == "--square"){
-    double x = atof(argv[2]);
-    cout <<"= "<< square(x)<<endl;
-  }
-  if (flag == "-t"|| flag == "--triangle") {
-      double x = atof(argv[2]);
-      double y = atof(argv[3]);
-     cout <<"= "<< triangle(x,y)<< endl;
-  }
-  if (flag == "-c"||flag == "--circle"){
-     double x = atof(argv[2]);
-     cout <<"= "<< circle(x)<< endl;
-  } 
+    else{
+    
+        solve_math(argv[1]);
+        cout << endl;
+    }
+    }
+   else {
+        cout << "Please provide a math problem! -h or --help for help" << endl;
+    }
   return 0;
 }
