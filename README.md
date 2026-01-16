@@ -1,45 +1,66 @@
-# calc
+# pcalc
 
 A simple command-line calculator.
+# about it
+ I made it for learning C++ and it's my first real finished project.
+ The code is sloppy, but I will do better next time... I hope.
 
-# Roadmap
-- adding more functions
-- adding gui
-- support for android and termux
+## 🌟 Latest Update (v1.5)
+- **Complex Expression Support:** You can now combine standard arithmetic with geometry functions in a single expression (e.g., `10x2+sqr:5`).
+- **New Geometry Functions:** Added support for square (`sqr:`), circle (`cir:`), and triangle (`tri:`) calculations.
+- **Improved Parsing:** enhanced command-line argument handling.
 
-# Installation
+## 🗺️Roadmap
+- Adding more functions.
+- Support for unlimited arguments in some functions (e.g., `pcalc add:1,2,3,4,5`).
+- Making a TUI (Text User Interface).
+- Saving answers and reusing them.
 
-This project can be built using either `make` or `CMake`.
-
-## Using Make
-
-To install and compile the program using Make, follow these steps:
-```
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-make
-```
-
-## Using CMake
-
-To install and compile the program using CMake, follow these steps:
-```
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-mkdir build
+## Installation
+To install and compile the program, follow these steps:
+```bash
+git clone https://github.com/potatoforge120/pcalc.git
+cd pcalc
+mkdir build 
 cd build
 cmake ..
 make
 ```
 
-# Usage
-Here are the available commands:
+### Optional: Install System-Wide
+To make `pcalc` available for all users (installs to `/usr/local/bin` by default):
+```bash
+sudo make install
+```
 
-*   `./calc -h` or `./calc help`: Shows the help message.
-*   `./calc -p <num1> <num2>`: Adds two numbers.
-*   `./calc -m <num1> <num2>`: Subtracts two numbers.
-*   `./calc -d <num1> <num2>`: Divides two numbers.
-*   `./calc -mu <num1> <num2>`: Multiplies two numbers.
-*   `./calc -c <radius>`: Calculates the area of a circle.
-*   `./calc -sq <num>`: Calculates the square of a number.
-*   `./calc -t <base> <height>`: Calculates the area of a triangle.
+### Optional: Install for Current User Only
+To make `pcalc` available only for your user (installs to `~/.local/bin`):
+```bash
+cmake -DCMAKE_INSTALL_PREFIX=$HOME/.local ..
+make install
+```
+*Note: Ensure `~/.local/bin` is in your `PATH`.*
+
+## Usage
+The `pcalc` program takes a single argument, which can be a flag or a mathematical expression.
+
+### Options:
+*   `pcalc -h` or `pcalc --help`: Shows the help message.
+*   `pcalc -v`: Shows version information ("pcalc v1.5").
+
+### Math Examples:
+You can perform basic arithmetic operations directly:
+*   `pcalc 10+5`
+*   `pcalc 10x5` (Multiplication)
+*   `pcalc 10/2`
+*   `pcalc 10-5`
+
+### Geometry Functions:
+Geometry functions are integrated into expressions using a `function_name:argument(s)` format:
+*   `pcalc sqr:5` (Calculates the square of 5)
+*   `pcalc cir:10` (Calculates the area of a circle with radius 10)
+*   `pcalc tri:3,4` (Calculates the area of a triangle with base 3, height 4)
+
+### Complex Example:
+You can combine operations and functions:
+*   `pcalc 10x2+sqr:5`
