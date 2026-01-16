@@ -7,14 +7,16 @@ A simple command-line calculator.
 
 ## 🌟 Latest Update (v1.5)
 - **Complex Expression Support:** You can now combine standard arithmetic with geometry functions in a single expression (e.g., `10x2+sqr:5`).
-- **New Geometry Functions:** Added support for square (`sqr:`), circle (`cir:`), and triangle (`tri:`) calculations.
+- **More Error handling** 
 - **Improved Parsing:** enhanced command-line argument handling.
+- **Changing the name** changing the name cs theres another program in the same name in some systems
 
 ## 🗺️Roadmap
 - Adding more functions.
-- Support for unlimited arguments in some functions (e.g., `pcalc add:1,2,3,4,5`).
+[x] Support for unlimited arguments in some functions (e.g., `pcalc -pluss 1 2 3 4 5`).
 - Making a TUI (Text User Interface).
 - Saving answers and reusing them.
+  
 
 ## Installation
 To install and compile the program, follow these steps:
