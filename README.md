@@ -14,8 +14,9 @@ A simple command-line calculator.
 ## 🗺️Roadmap
 - Adding more functions.
 - ~~Support for unlimited arguments in some functions (e.g., `pcalc -pluss 1 2 3 4 5`).~~
-- Making a TUI (Text User Interface).
 - Saving answers and reusing them.
+- Making a TUI (Text User Interface).
+
   
 
 ## Installation
